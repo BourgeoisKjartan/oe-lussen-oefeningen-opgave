@@ -18,21 +18,25 @@ namespace WpfGetallenTot10
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-public partial class MainWindow : Window
-{
-    public MainWindow()
+    public partial class MainWindow : Window
     {
-        InitializeComponent();
-    }
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
 
-    private void btnToonGetallen_Click(object sender, RoutedEventArgs e)
-    {
-        
-    }
+        private void btnToonGetallen_Click(object sender, RoutedEventArgs e)
+        {
+            lstGetallen.Items.Clear();
+            for (int i = 1; i <= 10; i++)
+            {
+                lstGetallen.Items.Add(i);
+            }
+        }
 
-    private void btnReset_Click(object sender, RoutedEventArgs e)
-    {
-        
+        private void btnReset_Click(object sender, RoutedEventArgs e)
+        {
+            lstGetallen.Items.Clear();
+        }
     }
-}
 }
